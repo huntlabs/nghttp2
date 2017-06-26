@@ -9,5 +9,5 @@
 	"targetType": "sourceLibrary",
 	"license": "proprietary",
 	"copyright": "Copyright © 2017, dsby",
-	"description": "Deimos Bindings for nghttp2.
+	"description": "Deimos Bindings for nghttp2."
 }

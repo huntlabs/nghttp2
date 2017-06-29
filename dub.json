@@ -2,9 +2,6 @@
 	"authors": [
 		"dsby"
 	],
-	"importPaths": [
-		"."
-	],
 	"name": "nghttp2",
 	"targetType": "sourceLibrary",
 	"license": "proprietary",

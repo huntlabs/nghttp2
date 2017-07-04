@@ -26,8 +26,19 @@ module deimos.nghttp2.nghttp2;
 
 import core.stdc.config;
 import core.stdc.stdarg;
+import core.stdc.stdint;
+version(Windows)
+{
+    alias ssize_t = ptrdiff_t;
+}
+else {
+    import core.sys.posix.sys.types;
+}
 
-extern (C):
+extern(C):
+@nogc:
+nothrow:
+@system:
 
 /* Define WIN32 when build target is Win32 API (borrowed from
    libcurl) */
@@ -72,14 +83,14 @@ enum NGHTTP2_PROTO_VERSION_ID_LEN = 2;
  * extension <https://tools.ietf.org/html/rfc7301>`_.  This is useful
  * to process incoming ALPN tokens in wire format.
  */
-enum NGHTTP2_PROTO_ALPN = "\x2h2";
+//enum NGHTTP2_PROTO_ALPN = "\x2h2";
 
 /**
  * @macro
  *
  * The length of :macro:`NGHTTP2_PROTO_ALPN`.
  */
-enum NGHTTP2_PROTO_ALPN_LEN = NGHTTP2_PROTO_ALPN.sizeof - 1;
+//enum NGHTTP2_PROTO_ALPN_LEN = NGHTTP2_PROTO_ALPN.sizeof - 1;
 
 /**
  * @macro

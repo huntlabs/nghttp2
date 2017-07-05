@@ -36,8 +36,6 @@ else {
 }
 
 extern(C):
-@nogc:
-nothrow:
 @system:
 
 /* Define WIN32 when build target is Win32 API (borrowed from

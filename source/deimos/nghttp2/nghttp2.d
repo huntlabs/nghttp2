@@ -32,7 +32,7 @@ version(Windows)
     alias ssize_t = ptrdiff_t;
 }
 else {
-    import core.sys.posix.sys.types;
+    public import core.sys.posix.sys.types : ssize_t;
 }
 
 extern(C):
